@@ -11,15 +11,15 @@ UI.prototype.addBookToList = function(book) {
     let tr = document.createElement("tr");
 
     tr.innerHTML = `
-<th>${book.title}</th>
-<th>${book.author}</th>
-<th>${book.isbn}</th>
-<th></th><a href="#">X</a></td>
-`
+        <th>${book.title}</th>
+        <th>${book.author}</th>
+        <th>${book.isbn}</th>
+        <th></th><a href="#" >X</a></tr>`;
     bookAdd.appendChild(tr);
-    // tr.addEventListener("click", function () {
-    //     this.remove();
-    // })
+
+    tr.addEventListener("click", function() {
+        this.remove();
+    })
 };
 
 UI.prototype.clear = function() {
